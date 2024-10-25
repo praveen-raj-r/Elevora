@@ -11,42 +11,63 @@ import JobPage from "./pages/job";
 import { ThemeProvider } from "./components/theme-provider";
 
 import "./App.css";
+import ProtectedRoute from "./components/protected-route";
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
     children: [
       {
-        children: [
-          {
-            path: "/",
-            element: <Landing />,
-          },
-          {
-            path: "/onboarding",
-            element: <Onboarding />,
-          },
-          {
-            path: "/jobs",
-            element: <JobListing />,
-          },
-          {
-            path: "/post-job",
-            element: <PostJob />,
-          },
-          {
-            path: "/my-jobs",
-            element: <MyJobs />,
-          },
-          {
-            path: "/saved-jobs",
-            element: <SavedJobs />,
-          },
-          {
-            path: "/job/:id",
-            element: <JobPage />,
-          },
-        ],
+        path: "/",
+        element: <Landing />,
+      },
+      {
+        path: "/onboarding",
+        element: (
+          <ProtectedRoute>
+            <Onboarding />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/jobs",
+        element: (
+          <ProtectedRoute>
+            <JobListing />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/post-job",
+        element: (
+          <ProtectedRoute>
+            <PostJob />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/my-jobs",
+        element: (
+          <ProtectedRoute>
+            <MyJobs />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/saved-jobs",
+        element: (
+          <ProtectedRoute>
+            <SavedJobs />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/job/:id",
+        element: (
+          <ProtectedRoute>
+            <JobPage />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
