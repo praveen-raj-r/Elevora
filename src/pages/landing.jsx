@@ -52,7 +52,7 @@ function Landing() {
             delay: 2000,
           }),
         ]}
-        className="w-full py-10"
+        className="w-full py-10 -z-10"
       >
         <CarouselContent className="flex items-center gap-5 sm:gap-20">
           {companies.map(({ name, id, path }) => (

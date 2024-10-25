@@ -6,17 +6,18 @@ import {
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
+import { Button } from "./ui/button";
 
 function Header() {
   return (
     <>
-      <nav className="py-4 flex justify-between items-center">
+      <nav className="flex items-center justify-between py-4">
         <Link to="/">
           <img src="/logo.png" className="h-20" alt="Hirrd Logo" />
         </Link>
-        {/* <Button variant="outline">Login</Button> */}
 
         <SignedOut>
+          <Button variant="outline">Login</Button>
           <SignInButton />
         </SignedOut>
         <SignedIn>
