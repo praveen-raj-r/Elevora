@@ -32,7 +32,9 @@ function Header() {
     <>
       <nav className="flex items-center justify-between py-4">
         <Link to="/">
-          <img src="/logo.png" className="h-20" alt="Hirrd Logo" />
+          <h1 className="py-4 pl-3 text-4xl font-extrabold tracking-tighter gradient-title sm:text-6xl lg:text-8xl">
+            Elevora
+          </h1>
         </Link>
         <div className="flex gap-8">
           <SignedOut>
