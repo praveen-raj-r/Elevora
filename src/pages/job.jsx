@@ -51,7 +51,7 @@ const JobPage = () => {
   }
 
   return (
-    <div className="flex flex-col gap-8 mt-5">
+    <div className="flex flex-col gap-8 px-2 mt-5 sm:px-0">
       <div className="flex flex-col-reverse items-center justify-between gap-6 md:flex-row">
         <h1 className="pb-3 text-4xl font-extrabold gradient-title sm:text-6xl">
           {job?.title}
@@ -59,7 +59,7 @@ const JobPage = () => {
         <img src={job?.company?.logo_url} className="h-12" alt={job?.title} />
       </div>
 
-      <div className="flex justify-between ">
+      <div className="flex flex-wrap justify-between sm:flex-row gap-y-3 gap-x-3">
         <div className="flex gap-2">
           <MapPinIcon /> {job?.location}
         </div>
