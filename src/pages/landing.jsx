@@ -61,7 +61,12 @@ function Landing() {
           ))}
         </CarouselContent>
       </Carousel>
-      <img src="/banner.jpeg" className="w-full" />
+      <h1 className="text-4xl font-extrabold tracking-tighter text-center sm:py-4 gradient-title lg:text-6xl">
+        Gettings Hired & Hiring made Easier
+      </h1>
+      <p className="text-base text-center text-gray-300 sm:mt-4 sm:text-xl">
+        Explore thousands of job listings or find the perfect candidate
+      </p>
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <Card>
           <CardHeader>
